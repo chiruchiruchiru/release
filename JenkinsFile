@@ -1,0 +1,8 @@
+pipeline { // Declarative pipelineであることを宣言する
+  agent any
+  stages {
+    stage("get resource") {
+      echo 'ああああああ'
+    }
+  }
+}
