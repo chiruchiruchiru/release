@@ -3,7 +3,7 @@ pipeline { // Declarative pipelineであることを宣言する
   stages {
     stage("get resource") {
       steps {
-        echo 'あああああああ'
+        echo '${text}'
       }
     }
   }
