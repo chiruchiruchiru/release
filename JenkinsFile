@@ -11,7 +11,7 @@ pipeline { // Declarative pipelineであることを宣言する
   stages {
     stage("get resource") {
       steps {
-        echo "${param.text}"
+        echo "${params.text}"
       }
     }
   }
