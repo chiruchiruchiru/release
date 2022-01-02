@@ -9,6 +9,11 @@ pipeline { // Declarative pipelineであることを宣言する
         )
     }
   stages {
+    stage('find files') {
+        steps {
+          copyArtifacts fingerprintArtifacts: true, projectName: 'dev-myRepository'
+        }
+    }
     stage('delete workspace') {
         steps {
             deleteDir()
@@ -31,5 +36,6 @@ pipeline { // Declarative pipelineであることを宣言する
             }
         }
     }
+
   }
 }
