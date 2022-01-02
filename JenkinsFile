@@ -9,10 +9,27 @@ pipeline { // Declarative pipelineであることを宣言する
         )
     }
   stages {
-    stage("get resource") {
-      steps {
-        echo "${params.text}"
-      }
+    stage('delete workspace') {
+        steps {
+            deleteDir()
+        }
+    }
+
+    stage('copy artifacts') {
+        steps {
+            copyArtifacts(projectName: "dev-myRepositorys")
+        }
+    }
+
+    stage('find files') {
+        steps {
+            script {
+                files = findFiles(glob: '*.*')
+                for (file in files) {
+                    echo file.name
+                }
+            }
+        }
     }
   }
 }
