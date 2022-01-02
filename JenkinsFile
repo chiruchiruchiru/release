@@ -17,7 +17,7 @@ pipeline { // Declarative pipelineであることを宣言する
 
     stage('copy artifacts') {
         steps {
-            copyArtifacts(projectName: "dev-myRepositorys")
+            copyArtifacts(projectName: "dev-myRepository")
         }
     }
 
