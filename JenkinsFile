@@ -1,13 +1,14 @@
 pipeline { // Declarative pipelineであることを宣言する
   agent any
   parameters {
-        // ticket no
-        string(
-            name: 'text',
-            defaultValue: 'x-japan',
-            description: ''
-        )
-    }
+      // ticket no
+      string(
+          name: 'text',
+          defaultValue: 'x-japan',
+          description: ''
+      )
+  }
+  stages {
     stage('git checkout') {
         steps {
           sh """
