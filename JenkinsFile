@@ -9,11 +9,6 @@ pipeline { // Declarative pipelineであることを宣言する
       )
   }
   stages {
-    stage('clean') {
-        steps {
-          cleanWs()
-        }
-    }
     stage('git checkout') {
         steps {
           sh """
@@ -35,6 +30,11 @@ pipeline { // Declarative pipelineであることを宣言する
             git commit -m 'commit'
             git push origin master
           """
+        }
+    }
+    stage('clean') {
+        steps {
+          cleanWs()
         }
     }
   }
