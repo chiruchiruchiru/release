@@ -14,5 +14,14 @@ pipeline { // Declarative pipelineであることを宣言する
           copyArtifacts fingerprintArtifacts: true, projectName: 'dev-myRepository'
         }
     }
+    stage('push') {
+        steps {
+          sh """
+            git add .
+            git commit -m "commit"
+            git push origin/master
+          """
+        }
+    }
   }
 }
