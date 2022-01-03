@@ -28,7 +28,7 @@ pipeline { // Declarative pipelineであることを宣言する
             git config --global user.email 'chiru.5emon@gmail.com'
             git config --global user.name 'chiruchiruchiru'
             git commit -m "commit"
-            git push origin master
+            git push origin main
           """
         }
     }
