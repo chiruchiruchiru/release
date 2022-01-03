@@ -8,7 +8,13 @@ pipeline { // Declarative pipelineであることを宣言する
             description: ''
         )
     }
-  stages {
+    stage('git checkout') {
+        steps {
+          sh """
+            git pull origin master
+            git checkout master
+          """
+    }
     stage('find files') {
         steps {
           copyArtifacts fingerprintArtifacts: true, projectName: 'dev-myRepository'
