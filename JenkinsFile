@@ -13,7 +13,6 @@ pipeline { // Declarative pipelineであることを宣言する
         steps {
           sh """
             git pull origin master
-            git checkout master
           """
         }
     }
