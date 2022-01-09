@@ -46,7 +46,7 @@ pipeline { // Declarative pipelineであることを宣言する
   }
   post {
     failure {
-      echo 'my webpack failed'
+      echo 'commit release failed'
     }
   }
 }
