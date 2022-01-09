@@ -29,6 +29,8 @@ pipeline { // Declarative pipelineであることを宣言する
     stage('push') {
         steps {
           sh """
+
+            git status
             git add .
             git config --global user.email 'chiru.5emon@gmail.com'
             git config --global user.name 'chiruchiruchiru'
