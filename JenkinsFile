@@ -4,7 +4,7 @@ pipeline { // Declarative pipelineであることを宣言する
       // ticket no
       string(
           name: 'text',
-          defaultValue: 'x-japan',
+          defaultValue: '',
           description: ''
       )
   }
