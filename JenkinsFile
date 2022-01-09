@@ -11,7 +11,7 @@ pipeline { // Declarative pipelineであることを宣言する
   stages {
     stage('get parameter') {
       steps {
-        echo "${TEXT}"
+        echo "${param.TEXT}"
       }
     }
     stage('git checkout') {
